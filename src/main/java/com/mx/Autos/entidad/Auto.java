@@ -1,6 +1,8 @@
 package com.mx.Autos.entidad;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,6 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Auto {
+	@Id
     private String matricula;  
     private String modelo;
     private String marca;
@@ -19,5 +22,6 @@ public class Auto {
     private long kilometraje;
     private double precio;
     private int cilindros;
+    @Column(name = "CURP_PERSONA")
     private String curpPersona;
 }
